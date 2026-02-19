@@ -1,0 +1,12 @@
+CREATE TABLE IF NOT EXISTS experience (
+  id SERIAL PRIMARY KEY,
+  company VARCHAR(200) NOT NULL,
+  role VARCHAR(200) NOT NULL,
+  description TEXT,
+  start_date DATE NOT NULL,
+  end_date DATE,
+  is_current BOOLEAN NOT NULL DEFAULT FALSE,
+  sort_order INT NOT NULL DEFAULT 0,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);
